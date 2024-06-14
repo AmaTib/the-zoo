@@ -4,11 +4,13 @@ export const Layout = () => {
   return (
     <>
       <>
-        <header>Header</header>
+        <header>The Zoo</header>
         <main>
           <Outlet />
         </main>
-        <footer> Footer </footer>
+        <footer>
+          <p>Inga djur har skadats under skapandet av detta projekt</p>
+        </footer>
       </>
     </>
   );
