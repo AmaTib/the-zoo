@@ -41,7 +41,13 @@ export const OneAnimal = () => {
       <h1>Mer om {pickedAnimal?.name}</h1>
       <section>
         <h2>{pickedAnimal?.latinName}</h2>
-        <img src={pickedAnimal?.imageUrl} alt={pickedAnimal?.name} />
+        <img
+          src={pickedAnimal?.imageUrl}
+          alt={pickedAnimal?.name}
+          onError={(e) => {
+            (e.target as HTMLImageElement).src = "/pexels-pixabay-356079.jpg";
+          }}
+        />
         <p>{pickedAnimal?.shortDescription}</p>
         <div>
           <p>{pickedAnimal?.lastFed}</p>

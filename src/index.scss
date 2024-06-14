@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -12,13 +18,4 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-}
-
-img {
-  height: 200px;
-  width: 200px;
-  object-fit: cover;
-}
-.animalContainer {
-  background-color: rgb(255, 255, 255);
 }

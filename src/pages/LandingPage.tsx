@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { IAnimal } from "../models/IAnimal";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import "./LandingPage.scss";
 
 export const LandingPage = () => {
   const animalsFromLs: IAnimal[] = JSON.parse(
@@ -31,17 +32,11 @@ export const LandingPage = () => {
 
   return (
     <>
-      <h1>LandingPage</h1>
+      <h2>Dina djur</h2>
 
       <section>
         {animals.map((animal) => (
-          <div
-            className="animalContainer"
-            key={animal.id}
-            onClick={() => {
-              moreAnimalInfo(animal.id);
-            }}
-          >
+          <div className="animalContainer" key={animal.id}>
             <img
               src={animal.imageUrl}
               alt="animal"
@@ -49,10 +44,13 @@ export const LandingPage = () => {
                 (e.target as HTMLImageElement).src =
                   "/pexels-pixabay-356079.jpg";
               }}
+              onClick={() => {
+                moreAnimalInfo(animal.id);
+              }}
             />
-            <h2>
+            <h3>
               {animal.name} ({animal.latinName})
-            </h2>
+            </h3>
           </div>
         ))}
       </section>

@@ -1,0 +1,29 @@
+header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1em;
+
+  position: fixed;
+
+  padding: 0 1em;
+  height: 5em;
+  width: 100%;
+  background-color: rgb(120, 112, 103);
+  font-size: 1em;
+  box-shadow: rgba(13, 11, 8, 0.696) 0px 3px 5px;
+
+  img {
+    height: 4rem;
+    width: 4rem;
+  }
+
+  h1 {
+    color: rgb(45, 40, 40);
+  }
+}
+
+main {
+  padding: 6em 2em 2em 2em;
+  text-align: center;
+}
