@@ -42,7 +42,14 @@ export const LandingPage = () => {
               moreAnimalInfo(animal.id);
             }}
           >
-            <img src={animal.imageUrl} alt="animal" />
+            <img
+              src={animal.imageUrl}
+              alt="animal"
+              onError={(e) => {
+                (e.target as HTMLImageElement).src =
+                  "/pexels-pixabay-356079.jpg";
+              }}
+            />
             <h2>
               {animal.name} ({animal.latinName})
             </h2>
