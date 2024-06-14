@@ -10,20 +10,37 @@ header {
   height: 5em;
   width: 100%;
   background-color: rgb(120, 112, 103);
-  font-size: 1em;
   box-shadow: rgba(13, 11, 8, 0.696) 0px 3px 5px;
 
   img {
-    height: 4rem;
-    width: 4rem;
+    height: 3.5rem;
+    width: 3.5rem;
   }
 
   h1 {
     color: rgb(45, 40, 40);
+    font-size: 1.7em;
   }
 }
 
 main {
   padding: 6em 2em 2em 2em;
   text-align: center;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #d5d4d4;
+  height: 5em;
+  padding: 0 1em;
+
+  p {
+    width: 30%;
+    text-align: center;
+    font-size: 0.7em;
+  }
 }

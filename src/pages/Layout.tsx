@@ -13,7 +13,7 @@ export const Layout = () => {
           <Outlet />
         </main>
         <footer>
-          <p>Inga djur har skadats under skapandet av detta projekt</p>
+          <p>Inga djur skadades under skapandet av detta projekt</p>
         </footer>
       </>
     </>
