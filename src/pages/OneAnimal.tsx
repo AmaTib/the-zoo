@@ -23,7 +23,7 @@ export const OneAnimal = () => {
     setAnimalsFromLs(
       animalsFromLs.map((animal) => {
         if (animal.id === clickedAnimalId) {
-          return { ...animal, name: "abc" };
+          return { ...animal, lastFed: new Date(), isFed: true };
         } else {
           return animal;
         }
@@ -45,12 +45,13 @@ export const OneAnimal = () => {
           src={pickedAnimal?.imageUrl}
           alt={pickedAnimal?.name}
           onError={(e) => {
-            (e.target as HTMLImageElement).src = "/pexels-pixabay-356079.jpg";
+            (e.target as HTMLImageElement).src =
+              "/pexels-markus-winkler-1430818-4097203.jpg";
           }}
         />
         <p>{pickedAnimal?.shortDescription}</p>
         <div>
-          <p>{pickedAnimal?.lastFed}</p>
+          <p>{pickedAnimal?.lastFed.toLocaleString()}</p>
           {pickedAnimal && (
             <button
               onClick={() => {

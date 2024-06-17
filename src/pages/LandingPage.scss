@@ -13,10 +13,27 @@ section {
     img {
       width: 80%;
       object-fit: cover;
-
-      &:hover {
-        cursor: pointer;
-      }
     }
+  }
+}
+
+.hungerStatusContainer {
+  display: flex;
+  align-items: center;
+
+  .hungerStatus {
+    height: 1em;
+    width: 1em;
+    border-radius: 50%;
+    padding-left: 1em;
+    background-color: rgb(119, 104, 104);
+  }
+
+  .statusNotFed {
+    background-color: rgb(200, 67, 67);
+  }
+
+  .statusFed {
+    background-color: rgb(101, 167, 101);
   }
 }
