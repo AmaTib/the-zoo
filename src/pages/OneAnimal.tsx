@@ -3,17 +3,20 @@ import { useNavigate, useParams } from "react-router-dom";
 import { IAnimal } from "../models/IAnimal";
 
 export const OneAnimal = () => {
-  //hitta djuret med id från paramen från localstorage
   const [animalsFromLs, setAnimalsFromLs] = useState<IAnimal[]>(
     JSON.parse(localStorage.getItem("animalList") || "[]")
   );
   const { animalId } = useParams();
   const navigate = useNavigate();
-  let pickedAnimal = null;
+  const [pickedAnimal, setPickedAnimal] = useState<IAnimal>();
 
-  if (animalId) {
-    pickedAnimal = animalsFromLs.find((animal) => animal.id === +animalId);
-  }
+  useEffect(() => {
+    localStorage.setItem("animalList", JSON.stringify(animalsFromLs));
+
+    if (animalId) {
+      setPickedAnimal(animalsFromLs.find((animal) => animal.id === +animalId));
+    }
+  }, [animalsFromLs, animalId]);
 
   function previousPage() {
     navigate("/");
@@ -30,10 +33,6 @@ export const OneAnimal = () => {
       })
     );
   }
-
-  useEffect(() => {
-    localStorage.setItem("animalList", JSON.stringify(animalsFromLs));
-  }, [animalsFromLs]);
 
   return (
     <>
@@ -58,6 +57,7 @@ export const OneAnimal = () => {
                 changeAnimalPropertyTest(pickedAnimal?.id);
                 console.log(animalsFromLs);
               }}
+              disabled={pickedAnimal?.isFed}
             >
               Mata
             </button>
