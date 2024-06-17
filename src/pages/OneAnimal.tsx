@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { IAnimal } from "../models/IAnimal";
+import { ShowAnimalInfo } from "../components/ShowAnimalInfo";
+import "./OneAnimal.scss";
 
 export const OneAnimal = () => {
   const [animalsFromLs, setAnimalsFromLs] = useState<IAnimal[]>(
@@ -40,32 +42,13 @@ export const OneAnimal = () => {
 
   return (
     <>
-      <button onClick={previousPage}>Tillbaka</button>
-      <h1>{pickedAnimal?.name}</h1>
+      <button onClick={previousPage}>&#11207; Tillbaka</button>
+      <h2>{pickedAnimal?.name}</h2>
+      <h3>{pickedAnimal?.latinName}</h3>
       <section>
-        <h2>{pickedAnimal?.latinName}</h2>
-        <img
-          src={pickedAnimal?.imageUrl}
-          alt={pickedAnimal?.name}
-          onError={(e) => {
-            (e.target as HTMLImageElement).src =
-              "/pexels-markus-winkler-1430818-4097203.jpg";
-          }}
-        />
-        <p>{pickedAnimal?.shortDescription}</p>
-        <div>
-          <p>{pickedAnimal?.lastFed.toLocaleString()}</p>
-          {pickedAnimal && (
-            <button
-              onClick={() => {
-                feedAnimal(pickedAnimal?.id);
-              }}
-              disabled={pickedAnimal?.isFed}
-            >
-              Mata
-            </button>
-          )}
-        </div>
+        {pickedAnimal && (
+          <ShowAnimalInfo pickedAnimal={pickedAnimal} feedAnimal={feedAnimal} />
+        )}
       </section>
     </>
   );

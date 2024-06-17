@@ -1,0 +1,41 @@
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em 0;
+}
+
+h2 {
+  padding: 1em 0;
+}
+
+img {
+  width: 90%;
+}
+
+.animalInfoWrapper {
+  div {
+    padding: 1em 0;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  img {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  section {
+    flex-direction: row;
+    padding: 4em 0;
+  }
+
+  img {
+    width: 40%;
+  }
+
+  .animalInfoWrapper {
+    width: 40%;
+  }
+}
