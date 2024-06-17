@@ -1,6 +1,7 @@
 section {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 2em;
 
   .animalContainer {
@@ -40,5 +41,16 @@ section {
 
   .statusFed {
     background-color: rgb(101, 167, 101);
+  }
+}
+
+@media screen and (min-width: 600px) {
+  section {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .animalContainer {
+      width: 40%;
+    }
   }
 }

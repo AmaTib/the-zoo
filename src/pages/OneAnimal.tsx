@@ -6,9 +6,9 @@ export const OneAnimal = () => {
   const [animalsFromLs, setAnimalsFromLs] = useState<IAnimal[]>(
     JSON.parse(localStorage.getItem("animalList") || "[]")
   );
+  const [pickedAnimal, setPickedAnimal] = useState<IAnimal>();
   const { animalId } = useParams();
   const navigate = useNavigate();
-  const [pickedAnimal, setPickedAnimal] = useState<IAnimal>();
 
   useEffect(() => {
     localStorage.setItem("animalList", JSON.stringify(animalsFromLs));
@@ -22,7 +22,7 @@ export const OneAnimal = () => {
     navigate("/");
   }
 
-  function changeAnimalPropertyTest(clickedAnimalId: number) {
+  function feedAnimal(clickedAnimalId: number) {
     setAnimalsFromLs(
       animalsFromLs.map((animal) => {
         if (animal.id === clickedAnimalId) {
@@ -58,8 +58,7 @@ export const OneAnimal = () => {
           {pickedAnimal && (
             <button
               onClick={() => {
-                changeAnimalPropertyTest(pickedAnimal?.id);
-                console.log(animalsFromLs);
+                feedAnimal(pickedAnimal?.id);
               }}
               disabled={pickedAnimal?.isFed}
             >

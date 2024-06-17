@@ -26,6 +26,7 @@ header {
 main {
   padding: 6em 2em 2em 2em;
   text-align: center;
+  min-height: 90vh;
 }
 
 footer {
@@ -35,7 +36,7 @@ footer {
   align-items: center;
 
   background-color: #d5d4d4;
-  height: 5em;
+  min-height: 10vh;
   padding: 0 1em;
 
   p {

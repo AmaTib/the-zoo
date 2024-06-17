@@ -18,3 +18,15 @@ body {
   place-items: center;
   min-height: 100vh;
 }
+
+button {
+  padding: 5px 15px;
+  background-color: rgb(203, 198, 186);
+  border: 1.5px solid rgb(117, 101, 101);
+  border-radius: 1em;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgb(161, 158, 150);
+  }
+}
