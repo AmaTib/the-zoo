@@ -26,7 +26,11 @@ export const OneAnimal = () => {
     setAnimalsFromLs(
       animalsFromLs.map((animal) => {
         if (animal.id === clickedAnimalId) {
-          return { ...animal, lastFed: new Date(), isFed: true };
+          return {
+            ...animal,
+            lastFed: new Date().toLocaleString(),
+            isFed: true,
+          };
         } else {
           return animal;
         }
@@ -37,7 +41,7 @@ export const OneAnimal = () => {
   return (
     <>
       <button onClick={previousPage}>Tillbaka</button>
-      <h1>Mer om {pickedAnimal?.name}</h1>
+      <h1>{pickedAnimal?.name}</h1>
       <section>
         <h2>{pickedAnimal?.latinName}</h2>
         <img

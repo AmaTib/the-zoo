@@ -20,6 +20,11 @@ section {
 .hungerStatusContainer {
   display: flex;
   align-items: center;
+  margin: 1em;
+
+  p {
+    padding-right: 1em;
+  }
 
   .hungerStatus {
     height: 1em;
@@ -30,7 +35,7 @@ section {
   }
 
   .statusNotFed {
-    background-color: rgb(200, 67, 67);
+    background-color: rgb(254, 100, 100);
   }
 
   .statusFed {
