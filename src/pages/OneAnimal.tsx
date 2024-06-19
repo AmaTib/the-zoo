@@ -42,7 +42,9 @@ export const OneAnimal = () => {
 
   return (
     <>
-      <button onClick={previousPage}>&#11207; Tillbaka</button>
+      <button className="returnButton" onClick={previousPage}>
+        &#11207; Tillbaka
+      </button>
       <h2>{pickedAnimal?.name}</h2>
       <h3>{pickedAnimal?.latinName}</h3>
       <section>
