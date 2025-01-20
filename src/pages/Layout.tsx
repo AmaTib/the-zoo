@@ -6,7 +6,10 @@ export const Layout = () => {
     <>
       <>
         <header>
-          <img src="/icons8-zoo-100.png" alt="zoo Icon" />
+          <img
+            src={`${import.meta.env.BASE_URL}/icons8-zoo-100.png`}
+            alt="zoo Icon"
+          />
           <h1>The Zoo</h1>
         </header>
         <main>

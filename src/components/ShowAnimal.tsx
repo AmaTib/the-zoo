@@ -13,7 +13,9 @@ export const ShowAnimal = ({ animal, moreAnimalInfo }: IShowAnimalProp) => {
           src={animal.imageUrl}
           alt="animal"
           onError={(e) => {
-            (e.target as HTMLImageElement).src = "/brokenImage.png";
+            (e.target as HTMLImageElement).src = `${
+              import.meta.env.BASE_URL
+            }/brokenImage.png`;
           }}
         />
         <h3>
