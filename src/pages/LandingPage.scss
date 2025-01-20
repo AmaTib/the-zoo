@@ -10,11 +10,12 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 400px;
     /* width: 80%; */
 
     img {
-      width: 80%;
-      /*  height: 300px; */
+      width: 70%;
+      height: 70%;
       object-fit: cover;
     }
   }
@@ -52,7 +53,7 @@ section {
     flex-wrap: wrap;
 
     .animalContainer {
-      width: 60%;
+      width: 40%;
     }
   }
 }

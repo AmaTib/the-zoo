@@ -13,8 +13,7 @@ export const ShowAnimal = ({ animal, moreAnimalInfo }: IShowAnimalProp) => {
           src={animal.imageUrl}
           alt="animal"
           onError={(e) => {
-            (e.target as HTMLImageElement).src =
-              "/pexels-markus-winkler-1430818-4097203.jpg";
+            (e.target as HTMLImageElement).src = "/brokenImage.png";
           }}
         />
         <h3>
