@@ -1,7 +1,7 @@
 {
   "name": "fed22d-thezoo-template",
+  "private": false,
   "homepage": "https://AmaTib.github.io/the-zoo",
-  "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
